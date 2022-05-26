@@ -5,7 +5,7 @@
     "license": "Apache-2.0",
     "authors": [
         {
-            "name": "Ryudith",
+            "name": "Ryudith"
         }
     ],
     "autoload": {
@@ -15,11 +15,13 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "AppTest\\": "tests/"
+            "Ryudith\\MezzioSimpleThrottle\\AppTest\\": "tests/"
         }
     },
     "require": {
-        "php": "^7.4 || ~8.0.0 || ~8.1.0"
+        "php": "^7.4 || ~8.0.0 || ~8.1.0",
+        "psr/http-server-middleware": "^1.0",
+        "psr/container": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5.11"
