@@ -100,13 +100,26 @@ return [
 
 Detail :
 
-1. **`request_limit_per_minute`** is how many hit before trigger throttle
-2. **`request_real_ip_key`** is assoc key to get request IP, default is 'REMOTE_ADDR' which you can change if you have custom key on your webserver.
-3. **`ip_path_key`** is flag to generate key if use IP-Path combine or just IP address.
-4. **`throttle_data_dir`** is string path location to save throttle record data.
-5. **`file_data_delimiter`** is data delimiter inside file, since this library file based record data.
-6. **`throttle_storage_class`** is service key to save throttle data. You can change if you want another storage type (do not forget implement interface **`Ryudith\MezzioSimpleThrottle\Storage\StorageInterface`** on your custom class)
-7. **`throttle_response_class`** is class to give response when throttle hit limit. Also you can change this if you want use your own class (do not forget implement interface **`Ryudith\MezzioSimpleThrottle\Response\ThrottleResponseInterface`** on your own class).
+1. **`request_limit_per_minute`**
+ is how many hit before trigger throttle
+
+2. **`request_real_ip_key`** 
+ is assoc key to get request IP, default is 'REMOTE_ADDR' which you can change if you have custom key on your webserver.
+ 
+3. **`ip_path_key`** 
+ is flag to generate key if use IP-Path combine or just IP address.
+
+4. **`throttle_data_dir`** 
+ is string path location to save throttle record data.
+
+5. **`file_data_delimiter`** 
+ is data delimiter inside file, since this library file based record data.
+
+6. **`throttle_storage_class`** 
+ is service key to save throttle data. You can change if you want another storage type (do not forget implement interface **`Ryudith\MezzioSimpleThrottle\Storage\StorageInterface`** on your custom class)
+ 
+7. **`throttle_response_class`** 
+ is class to give response when throttle hit limit. Also you can change this if you want use your own class (do not forget implement interface **`Ryudith\MezzioSimpleThrottle\Response\ThrottleResponseInterface`** on your own class).
 
 You do not have to edit configuration inside **`ConfigProvider.php`** directly to change configuration, just add configuration you want to change to **`config/autoload/mezzio.global.php`** for example or any configuration file you use.
 
