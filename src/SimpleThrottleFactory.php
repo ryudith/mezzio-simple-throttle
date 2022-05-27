@@ -3,7 +3,6 @@
  * Factory to create Ryudith\MezzioSimpleThrottle\SimpleThrottle.
  * 
  * @author Ryudith
- * @license Apache-2.0
  * @package Ryudith\MezzioSimpleThrottle
  */
 declare(strict_types=1);
@@ -19,8 +18,8 @@ class SimpleThrottleFactory
      * Ryudith\MezzioSimpleThrottle\Storage\StorageInterface implementation object, 
      * and Ryudith\MezzioSimpleThrottle\ThrottleResponseInterface implementation object.
      * 
-     * @param Psr\Container\ContainerInterface $container Implementation object of ContainerInterface.
-     * @return Ryudith\MezzioSimpleThrottle\SimpleThrottle
+     * @param ContainerInterface $container Implementation object of ContainerInterface.
+     * @return SimpleThrottle
      */
     public function __invoke(ContainerInterface $container) : SimpleThrottle
     {

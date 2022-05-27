@@ -4,7 +4,6 @@
  * which responsible for give response after throttle limit hit.
  * 
  * @author Ryudith
- * @license Apache-2.0
  * @package Ryudith\MezzioSimpleThrottle\Response
  */
 
@@ -29,7 +28,7 @@ class ThrottleResponse implements ThrottleResponseInterface
     /**
      * Initialize by set $isJsonRequest flag true or false depend request header 'content-type'.
      * 
-     * @param Psr\Http\Message\ServerRequestInterface $request To get header 'content-type' for flag $isJsonRequest.
+     * @param ServerRequestInterface $request To get header 'content-type' for flag $isJsonRequest.
      */
     public function __construct (ServerRequestInterface $request)
     {
@@ -42,7 +41,7 @@ class ThrottleResponse implements ThrottleResponseInterface
     /**
      * Return implementation ResponseInterface depend $isJsonRequest flag.
      * 
-     * @return Psr\Http\Message\ResponseInterface Response object.
+     * @return ResponseInterface Response object.
      */
     public function generateResponse () : ResponseInterface
     {

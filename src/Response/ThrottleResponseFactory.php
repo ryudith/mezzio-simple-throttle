@@ -1,7 +1,6 @@
 <?php
 /**
  * @author Ryudith
- * @license Apache-2.0
  * @package Ryudith\MezzioSimpleThrottle\Response
  */
 
@@ -17,8 +16,8 @@ class ThrottleResponseFactory
     /**
      * Create object ThrottleLimitResponse by passing Psr\Container\ContainerInterface implementation object.
      * 
-     * @param Psr\Container\ContainerInterface $container Implementation object of ContainerInterface.
-     * @return Ryudith\MezzioSimpleThrottle\ThrottleResponse Object to give response.
+     * @param ContainerInterface $container Implementation object of ContainerInterface.
+     * @return ThrottleResponse Object to give response.
      */
     public function __invoke(ContainerInterface $container) : ThrottleResponse 
     {

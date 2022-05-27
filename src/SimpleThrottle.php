@@ -3,7 +3,6 @@
  * Real class that do functionality for check and limit throttle request.
  * 
  * @author Ryudith
- * @license Apache-2.0
  * @package Ryudith\MezzioSimpleThrottle
  */
 declare(strict_types=1);
@@ -29,14 +28,14 @@ class SimpleThrottle implements MiddlewareInterface
     /**
      * StorageInterface object reference.
      * 
-     * @var Ryudith\MezzioSimpleThrottle\Storage\StorageInterface $throttleData
+     * @var StorageInterface $throttleData
      */
     private StorageInterface $throttleData;
 
     /**
      * ThrottleResponseInterface object reference.
      * 
-     * @var Ryudith\MezzioSimpleThrottle\Response\ThrottleResponseInterface $throttleResponse
+     * @var ThrottleResponseInterface $throttleResponse
      */
     private ThrottleResponseInterface $throttleResponse;
 
@@ -44,8 +43,8 @@ class SimpleThrottle implements MiddlewareInterface
      * Assign class properties.
      * 
      * @param array $config 'mezzio_simple_throttle' assoc array config.
-     * @param Ryudith\MezzioSimpleThrottle\Storage\StorageInterface $throttleData Implementation object StorageInterface.
-     * @param Ryudith\MezzioSimpleThrottle\ThrottleResponseInterface $throttleResponse Implementation object ThrottleResponseInterface.
+     * @param StorageInterface $throttleData Implementation object StorageInterface.
+     * @param ThrottleResponseInterface $throttleResponse Implementation object ThrottleResponseInterface.
      */
     public function __construct (
         array $config, 
@@ -61,9 +60,9 @@ class SimpleThrottle implements MiddlewareInterface
      * Generate data key, check throttle data, create or update throttle data and 
      * give response(message limit) if throttle limit hit by request.
      * 
-     * @param Psr\Http\Message\ServerRequestInterface $request
-     * @param Psr\Http\Server\RequestHandlerInterface $handle
-     * @return Psr\Http\Message\ResponseInterface
+     * @param ServerRequestInterface $request
+     * @param RequestHandlerInterface $handle
+     * @return ResponseInterface
      */
     public function process (ServerRequestInterface $request, RequestHandlerInterface $handle) : ResponseInterface
     {
