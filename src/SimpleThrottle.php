@@ -117,7 +117,12 @@ class SimpleThrottle implements MiddlewareInterface
     {
         $realIpKey = $this->config['request_real_ip_key'];
         $realIp = getenv($realIpKey);
-        if ($realIp === false) 
+        if ($realIp === false && ! isset($_SERVER[$realIpKey])) 
+        {
+            // give default value if request has no IP
+            return '0.0.0.0';
+        }
+        else if ($realIp === false) 
         {
             $realIp = $_SERVER[$realIpKey];
         }

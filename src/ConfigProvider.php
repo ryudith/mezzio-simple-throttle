@@ -29,6 +29,7 @@ class ConfigProvider
                 'factories' => [
                     FileSystemThrottleStorage::class => FileSystemThrottleStorageFactory::class,
                     ThrottleResponse::class => ThrottleResponseFactory::class,
+                    SimpleThrottle::class => SimpleThrottleFactory::class,
                 ],
             ],
             'mezzio_simple_throttle' => [
