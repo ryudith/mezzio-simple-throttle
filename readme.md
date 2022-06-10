@@ -1,6 +1,6 @@
 # **mezzio-simple-throttle**
 
-`Ryudith\MezzioSimpleThrottle` is throttle middleware library for Mezzio framework.
+`Ryudith\MezzioSimpleThrottle` is throttle middleware for Mezzio framework.
 
 ## **Instalation**
 
